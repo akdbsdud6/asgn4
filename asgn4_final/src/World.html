@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+
+    <p id="performance"> XXX </p>
+    <label for="cameraAngle">Camera Angle:</label>
+    <input type="range" id="cameraAngle" min="0" max="360" value="0">
+    <p>
+      
+    </p><button onclick="toggleNormalDebug()">Normal On/Off</button>
+    <button onclick="toggleLightAnimation()">Animation On/Off</button>
+
+
+    <p>
+      Light X <input type="range" min="-250" max="250" value="0" class="slider" id="lightSlideX">
+      Light Y <input type="range" min="-250" max="250" value="100" class="slider" id="lightSlideY">
+      Light Z <input type="range" min="-250" max="250" value="0" class="slider" id="lightSlideZ">
+    </p>
+---
+    <p>
+    
+      Light Color RGB<p></p>
+      Red <input type="range" id="lightRed" min="0" max="256" value="256" class="slider"><p></p>
+      Green <input type="range" id="lightGreen" min="0" max="256" value="256" class="slider"> <p></p>
+      Blue <input type="range" id="lightBlue" min="0" max="256" value="256" class="slider"><p></p>
+      
+    </p>
+    ---
+    <p></p>
+     Light Switch
+     <p></p>
+    <button id="light_on">ON</button>
+    <button id="light_off">OFF</button>    
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix-cse160.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Cube.js"></script>
+    <script src="Camera.js"></script>
+    <script src="World.js"></script>
+    <script src="Sphere.js"></script>
+  </body>
+</html>
